@@ -1,0 +1,63 @@
+Sample Output 1: Configuration of AWS CloudWatch Alarms
+
+1)EC2 Instances:
+
+*Log in to the AWS Management Console.
+*Navigate to the CloudWatch service.
+*In the left sidebar, click on "Alarms" and then "Create Alarm."
+*Choose "Select metric" and select the metric you want to monitor 
+*Set the conditions for the alarm, including the threshold and the evaluation period.
+*Define the actions to be taken when the alarm state is triggered 
+*Review and create the alarm.
+
+2)RDS Databases:
+
+Follow the same steps as for EC2 instances but select the relevant RDS metrics 
+Lambda Functions:
+
+AWS Lambda automatically emits metrics to CloudWatch. You can create alarms based on these metrics. Follow similar steps as for EC2 instances and RDS databases.
+
+Sample Output 2: Integration of AWS SNS for Alerts
+
+1)Create an SNS Topic:
+
+*Log in to the AWS Management Console.
+*Navigate to the SNS service.
+*Click on "Topics" and then "Create topic."
+*Provide a name and display name for the topic.
+
+2)Subscribe to the SNS Topic:
+
+*After creating the topic, click on it, and under "Actions," select "Create subscription."
+*Choose the protocol (email or HTTPS for Slack) and provide the necessary information (email address or webhook URL).
+*Confirm the subscription by following the instructions sent to the email or Slack.
+
+3)Add SNS as an Alarm Action:
+
+*Go back to your CloudWatch Alarms created in the first step.
+*Edit each alarm and add an action to notify the SNS topic you created.
+
+4)Test the Setup:
+
+*Trigger a test alarm by causing a metric to breach the defined threshold. You should receive alerts on the subscribed email addresses or Slack channel.
+
+Sample Output 3: Creation of Custom CloudWatch Dashboards
+
+1)Create a Dashboard:
+
+*In the CloudWatch service, navigate to "Dashboards" and click on "Create dashboard."
+*Provide a name and description for your custom dashboard.
+
+2)Add Widgets:
+
+*Click on "Add widget" to add different types of graphs and data visualizations.
+*Select the resources you want to monitor (EC2 instances, RDS databases, Lambda functions) and the metrics you want to display (e.g., CPU utilization, memory usage).
+
+3)Customize the Dashboard:
+
+*Organize the widgets, adjust time ranges, and set up automatic refreshing.
+
+4)Save and Share:
+
+*Save the dashboard for future use and troubleshooting.
+*Share the dashboard URL with your team for collaborative monitoring.
